@@ -17,7 +17,7 @@ interface LayoutProps {
 }
 
 export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title, summary } = content
+  const { category, slug, date, title, summary } = content
 
   return (
     <div className="min-h-screen py-6">
@@ -26,23 +26,30 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
         <article className="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800">
           <div className="px-6 py-8 md:px-10 md:py-12">
             <header>
-              <div className="space-y-3 border-b border-gray-200 pb-8 text-center dark:border-gray-700">
-                <div>
+              <div className="space-y-3 border-b border-gray-200 pb-8 text-left dark:border-gray-700">
+                <div className="mb-1">
                   <PageTitle>{title}</PageTitle>
                 </div>
-                <div className="text-left text-base font-medium text-gray-500 dark:text-gray-400">
+                <div className="my-4 text-lg text-zinc-600 lg:text-xl dark:text-gray-400">
                   {summary}
                 </div>
-                <dl>
+                <dl className="flex gap-1">
+                  {category && (
+                    <>
+                      <div className="text-primary-400 font-bold">{category}</div>
+                      <div className="font-400 text-gray-400">|</div>
+                    </>
+                  )}
                   <div>
                     <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium text-gray-500 dark:text-gray-400">
+                    <dd className="text-base font-medium text-gray-500 italic dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                     </dd>
                   </div>
                 </dl>
               </div>
             </header>
+
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
               <div
                 className="prose dark:prose-invert prose-lg mx-auto max-w-3xl pt-10 pb-8"

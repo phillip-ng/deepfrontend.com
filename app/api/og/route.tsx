@@ -27,20 +27,22 @@ function handler(req: NextRequest) {
             boxSizing: 'border-box',
           }}
         >
-          <h1
+          <h5
             style={{
-              fontSize: 70,
+              fontSize: 65,
               fontWeight: 700,
-              color: 'black',
+              color: '#27272a',
               textAlign: 'left',
               lineHeight: 1.25,
               wordBreak: 'break-word',
-              maxWidth: '50%',
+              width: '80%',
+              maxWidth: '100%',
               marginLeft: 120,
+              letterSpacing: '-0.025em',
             }}
           >
             {title}
-          </h1>
+          </h5>
 
           <svg
             width="429"
