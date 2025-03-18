@@ -8,8 +8,8 @@ const siteMetadata = {
   theme: 'light', // system, dark or light
   siteUrl: 'https://deepfrontend.com',
   siteRepo: 'https://github.com/phillip-ng/deepfrontend.com',
-  siteLogo: `${process.env.BASE_PATH || ''}/static/images/phillip-ng-isometric-trans.jpg`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/phillip-ng-isometric.png`,
+  siteLogo: `${process.env.BASE_PATH || ''}/static/images/phillip-ng-isometric-trans.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/phillip-ng-isometric.jpg`,
   email: 'phillipng.dev@gmail.com',
   github: 'https://github.com/phillip-ng',
   x: 'https://x.com/chihuahua_dev',
