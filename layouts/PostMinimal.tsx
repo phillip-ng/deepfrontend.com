@@ -52,7 +52,7 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
 
             <div className="divide-y divide-gray-200 dark:divide-gray-700">
               <div
-                className="prose dark:prose-invert prose-lg mx-auto max-w-3xl pt-10 pb-8"
+                className="prose dark:prose-invert prose-lg max-w-none pt-10 pb-8"
                 style={{ lineHeight: '1.8' }}
               >
                 {children}

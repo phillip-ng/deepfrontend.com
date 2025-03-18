@@ -37,7 +37,7 @@ function handler(req: NextRequest) {
               wordBreak: 'break-word',
               width: '80%',
               maxWidth: '100%',
-              marginLeft: 120,
+              marginLeft: 100,
               letterSpacing: '-0.025em',
             }}
           >

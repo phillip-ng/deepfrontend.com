@@ -127,13 +127,9 @@ export const Blog = defineDocumentType(() => ({
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),
     },
-    coverImage: {
+    cardImage: {
       type: 'string',
       resolve: (doc) => {
-        if (doc.images && Array.isArray(doc.images) && doc.images.length > 0) {
-          return doc.images[0]
-        }
-        // Generate a URL pointing to the dynamic endpoint with a URL‑encoded title
         const encodedTitle = encodeURIComponent(doc.title)
         return `/api/og?title=${encodedTitle}`
       },

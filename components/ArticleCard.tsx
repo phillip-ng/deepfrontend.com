@@ -4,7 +4,7 @@ import Tag from '@/components/Tag'
 import { formatDate } from 'pliny/utils/formatDate'
 
 export default function ArticleCard({ post }) {
-  const { slug, date, title, summary, tags, images, mainTag, coverImage } = post
+  const { slug, date, title, summary, tags, mainTag, cardImage } = post
 
   return (
     <div className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-gray-100 bg-white/80 transition-all duration-300 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950">
@@ -16,7 +16,7 @@ export default function ArticleCard({ post }) {
           </div>
         )}
         <Image
-          src={coverImage}
+          src={cardImage}
           alt={title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
